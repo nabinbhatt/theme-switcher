@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* custom variables */
+:root {
+    --primary-color: #ebedff;
+    --secondary-color: #102b4b;
+    --title-color: #290fd6;
+    --button-bg: rgb(198, 83, 83);
+}
+
+[data-theme="dark"] {
+    --primary-color: #011627;
+    --secondary-color: #a9b1e5;
+    --title-color: #0095ff;
+    --button-bg: #a9b1e5;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: Roboto, sans-serif;
+    transition: all 0.5s linear 0s;
+}
+
+.container {
+    max-width: 80%;
+    margin: 8rem auto 0px;
+}
+
+#switch {
+    background: none;
+    height: inherit;
+    cursor: pointer;
+}
+
+.svg {
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+}
+
+.title {
+    color: var(--title-color);
+    margin: 1rem 0;
+}
+
+.content p {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.more {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--button-bg);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 1.5rem 0;
+    letter-spacing: 1px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.more:hover {
+    opacity: 0.8;
+    transition: all 0.3s linear 0s;
+}
+
+@media screen and (min-width: 700px) {
+    .container {
+        width: 50%;
+    }
+}
